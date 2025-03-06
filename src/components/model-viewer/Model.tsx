@@ -8,7 +8,11 @@ interface ModelProps {
 
 const Model: React.FC<ModelProps> = ({ originalCameraPosRef }) => {
   const [loading, setLoading] = useState(true); // Manage loading state
-  const { scene } = useGLTF("/cube.glb", true); // Load 3D model, true enables the loader
+  //   local
+  // Load 3D model, true enables the loader
+  //   const { scene } = useGLTF("/cube.glb", true);
+  //   deployment
+  const { scene } = useGLTF("/3d-model-viewer/cube.glb", true);
   const { camera } = useThree();
   const modelRef = useRef<THREE.Group>(null); // Reference to the 3D model
   const isDragging = useRef(false); // Track mouse drag state
