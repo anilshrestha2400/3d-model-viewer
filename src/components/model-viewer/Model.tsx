@@ -7,7 +7,7 @@ interface ModelProps {
 }
 
 const Model: React.FC<ModelProps> = ({ originalCameraPosRef }) => {
-  const [loading, setLoading] = useState(true); // Manage loading state
+  const [loading, setLoading] = useState(true);
   //   local
   // Load 3D model, true enables the loader
   //   const { scene } = useGLTF("/cube.glb", true);
@@ -20,7 +20,6 @@ const Model: React.FC<ModelProps> = ({ originalCameraPosRef }) => {
 
   useEffect(() => {
     if (scene) {
-      // Set loading state to false once the model is loaded
       setLoading(false);
 
       // Calculate the bounding box of the model
@@ -40,13 +39,12 @@ const Model: React.FC<ModelProps> = ({ originalCameraPosRef }) => {
     }
   }, [scene, camera, originalCameraPosRef]);
 
-  /** Handles mouse down event */
   const handleMouseDown = (event: MouseEvent) => {
     isDragging.current = true;
     previousMouseX.current = event.clientX;
   };
 
-  /** Handles mouse move event for rotating the model */
+  // Handles mouse move event for rotating the model
   const handleMouseMove = (event: MouseEvent) => {
     if (isDragging.current && modelRef.current) {
       const deltaX = event.clientX - previousMouseX.current;
@@ -55,12 +53,10 @@ const Model: React.FC<ModelProps> = ({ originalCameraPosRef }) => {
     }
   };
 
-  /** Handles mouse up event */
   const handleMouseUp = () => {
     isDragging.current = false;
   };
 
-  // Attach and clean up mouse event listeners
   useEffect(() => {
     window.addEventListener("mousedown", handleMouseDown);
     window.addEventListener("mousemove", handleMouseMove);
