@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/3d-model-viewer/static/css/main.cc85d1f1.css",
-    "main.js": "/3d-model-viewer/static/js/main.000dee43.js",
+    "main.js": "/3d-model-viewer/static/js/main.0f7d7e3a.js",
     "static/js/453.9c73738f.chunk.js": "/3d-model-viewer/static/js/453.9c73738f.chunk.js",
     "index.html": "/3d-model-viewer/index.html",
     "main.cc85d1f1.css.map": "/3d-model-viewer/static/css/main.cc85d1f1.css.map",
-    "main.000dee43.js.map": "/3d-model-viewer/static/js/main.000dee43.js.map",
+    "main.0f7d7e3a.js.map": "/3d-model-viewer/static/js/main.0f7d7e3a.js.map",
     "453.9c73738f.chunk.js.map": "/3d-model-viewer/static/js/453.9c73738f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cc85d1f1.css",
-    "static/js/main.000dee43.js"
+    "static/js/main.0f7d7e3a.js"
   ]
 }
